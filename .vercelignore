@@ -1,0 +1,13 @@
+node_modules
+.git
+*.log
+.env*
+README.md
+MIGRATION_GUIDE.md
+QUICK_START.md
+ANDROID APP/
+supabase-schema.sql
+deploy.sh
+deploy-vercel.sh
+*.md
+.gitignore
