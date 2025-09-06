@@ -1,0 +1,45 @@
+{
+  "name": "airavat-supabase",
+  "version": "2.0.0",
+  "description": "AIRAVAT Remote Access Tool migrated to Supabase - Web Control Panel",
+  "main": "WEB PANEL/index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static site - no build needed'",
+    "deploy": "vercel --prod",
+    "setup": "bash deploy.sh"
+  },
+  "keywords": [
+    "airavat",
+    "remote-access",
+    "android",
+    "supabase",
+    "control-panel",
+    "security-research"
+  ],
+  "author": {
+    "name": "Original: Th30neAnd0nly, Migration: Bionic Sailor",
+    "url": "https://github.com/bionic-sailor"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Th30neAnd0nly/AIRAVAT"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  },
+  "files": [
+    "WEB PANEL/**/*",
+    "vercel.json",
+    "README.md",
+    "MIGRATION_GUIDE.md"
+  ],
+  "homepage": "https://github.com/Th30neAnd0nly/AIRAVAT#readme",
+  "bugs": {
+    "url": "https://github.com/Th30neAnd0nly/AIRAVAT/issues"
+  }
+}
