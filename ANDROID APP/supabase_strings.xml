@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Replace these values with your Supabase project details -->
-    <string name="supabase_url">https://your-project-id.supabase.co</string>
-    <string name="supabase_anon_key">your-supabase-anon-key</string>
-    <string name="supabase_service_role_key">your-supabase-service-role-key</string>
+    <string name="supabase_url">https://auedkftrlingnnyeezgc.supabase.co</string>
+    <string name="supabase_anon_key">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF1ZWRrZnRybGluZ25ueWVlemdjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTcxNjI0MzksImV4cCI6MjA3MjczODQzOX0.YHDJFIW6yAQQpe7Jiux85VtIq-LkeOIpDeIgWNvQrZM</string>
+    <string name="supabase_service_role_key">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF1ZWRrZnRybGluZ25ueWVlemdjIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1NzE2MjQzOSwiZXhwIjoyMDcyNzM4NDM5fQ.M5PJ9KUAD5ap6hzpyHAKp35YbO1K-A_btuZIMJGoKmc</string>
     
     <!-- These replace the Firebase configuration -->
     <!-- Remove or comment out all firebase_* strings when migrating -->

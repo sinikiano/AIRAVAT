@@ -91,8 +91,16 @@ The new system uses:
 
 ### 3.3 Replace Java/Kotlin Code
 
-1. Add the `SupabaseClient.java` file to your project's source code
-2. Replace all Firebase database calls with Supabase equivalents:
+1. Add the `SupabaseClient.java` or `SupabaseClientDirect.java` file to your project's source code
+
+   > **Note:** Use `SupabaseClientDirect.java` if you want to avoid R.string resource dependencies. It uses direct string configuration which is easier for APK modification.
+
+2. Add appropriate package declaration when integrating:
+   ```java
+   package com.instagram.android.supabase; // Add this line at the top
+   ```
+
+3. Replace all Firebase database calls with Supabase equivalents:
 
    **Before (Firebase):**
    ```java
