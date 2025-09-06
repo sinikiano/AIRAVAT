@@ -102,3 +102,5 @@ signed/
 # Test files
 test-devices.txt
 test-credentials.txt
+
+.fake
